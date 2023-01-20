@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+        <h2 class="title">
+            <%=title %>
+        </h2>
+        <div class="container">
+            <div class="container-product">
+                <div class="container-product-button">
+                    <button class="btn-edit"><a href="/edit/<%=item.id%>">Editar</a></button>
+                    <button class="btn-delete" onclick="postData(` <%=item.id%>`)">Eliminar</button>
+                </div>
+
+                <p>
+                    id: <%=item.id%>
+                </p>
+                titulo:
+                <%=item.title%><br /> price:
+                    <%=item.price%><br />
+                        <img class="product-img" src="<%=item.thumbnail %>" /><br />
+            </div>
+
+        </div>
+
+        <%- include('../partials/footer'); %>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+    <h2> <%=title %> </h2>
+        <div class="formulario">
+                <form  class="formulario">
+                    <input type="text" name="title" id="title" placeholder="titulo" />
+                    <input type="text" name="price" id="price" placeholder="precio" />
+                    <input type="text" name="thumbnail" id="thumbnail" placeholder="link imagen" />
+                    <input type="submit" value="Enviar" onclick="putData(`<%=id%>`)" />
+                </form>
+        </div>
+
+
+        <%- include('../partials/footer'); %>
+</body>
+
+</html>
