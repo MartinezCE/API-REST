@@ -25,13 +25,13 @@ export const createNewProduct = (req, res) => {
     try {
         let maxId
         const product = req.body;
-        product.price = parseFloat(product.price);
+        product.price = (product.price !== '') ? parseFloat(product.price) : 'sin asignar';
         const ids = productsHC.map(prod => prod.id)
         const emptyId = ids.length === 0;
         emptyId ? maxId = 0 : maxId = Math.max(...ids)
         const newProduct = {
             id: maxId + 1,
-            title: product.title,
+            title: (product.title !== '') ? product.title : 'sin asignar',
             price: product.price,
             thumbnail: product.thumbnail,
         }
